@@ -1,7 +1,7 @@
 /* --- TEMEL AYARLAR ve DEĞİŞKENLER --- */
 :root {
-    --bg-dark: #0D1B2A;
-    --bg-medium: #1B263B;
+    --bg-dark: #293058;
+    --bg-medium: #354d7a;
     --text-light: #E0E1DD;
     --text-dark: #333;
     --accent-color: #00BFFF; /* Deep Sky Blue - Vurgu Rengi */
@@ -72,9 +72,41 @@ body {
 .specs-list strong { color: var(--accent-color); }
 
 /* --- SPONSORLAR --- */
-.sponsor-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; align-items: center; }
-.sponsor-logo { background-color: #222; padding: 1.5rem; border-radius: 5px; text-align: center; }
+.sponsor-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Kutuların minimum genişliğini ayarladık */
+    gap: 1.5rem; /* Kutular arası boşluğu ayarladık */
+    justify-content: center; /* Kutuları merkeze hizala */
+    align-items: stretch; /* Kutuların aynı yüksekliğe sahip olmasını sağlar */
+    margin-top: 3rem;
+}
 
+.sponsor-logo {
+    background-color: #2a3d52; /* Hafif daha koyu bir gri tonu */
+    padding: 1.2rem; /* İç boşluğu ayarladık */
+    border-radius: 8px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px; /* Her kutunun minimum yüksekliği */
+    max-height: 140px; /* Her kutunun maksimum yüksekliği */
+    overflow: hidden; /* Taşmayı engelle */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover efekti için geçiş */
+}
+
+.sponsor-logo:hover {
+    transform: translateY(-5px); /* Üzerine gelince hafifçe yukarı kaydır */
+    box-shadow: 0 8px 15px rgba(0, 191, 255, 0.3); /* Parlak bir gölge ekle */
+}
+
+.sponsor-logo img {
+    max-width: 120%; /* Resmin kutu içinde %120 genişlikte olmasını sağlar */
+    max-height: 120%; /* Resmin kutu içinde %120 yükseklikte olmasını sağlar */
+    height: auto; /* Oranı koru */
+    object-fit: contain; /* Resmin kutu içinde oranları bozulmadan sığmasını sağlar */
+    display: block;
+    /* mix-blend-mode ve filter satırlarını kaldırdık, çünkü logonun kendi arkaplanı var */
+}
 /* --- İLETİŞİM --- */
 #iletisim { text-align: center; }
 .contact-email { display: inline-block; margin-top: 2rem; font-size: 1.5rem; color: var(--accent-color); text-decoration: none; border: 2px solid var(--accent-color); padding: 1rem 2rem; border-radius: 5px; transition: background-color 0.3s, color 0.3s; }
