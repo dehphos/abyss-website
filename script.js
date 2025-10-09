@@ -1,26 +1,46 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // Sayfa kaydırıldığında menüdeki aktif linki güncelleyen fonksiyon
-    const sections = document.querySelectorAll('section');
+
+    const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.navbar-nav a');
+    const sections = document.querySelectorAll('section');
 
+    // 1. Menünün arkaplanını kaydırmaya göre değiştirme
     window.addEventListener('scroll', () => {
-        let current = '';
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
 
+        // 2. Kaydırmaya göre menüdeki aktif linki belirleme
+        let currentSection = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            // Navbar yüksekliğini de hesaba katıyoruz
-            if (pageYOffset >= sectionTop - 100) { 
-                current = section.getAttribute('id');
+            if (pageYOffset >= sectionTop - 150) {
+                currentSection = section.getAttribute('id');
             }
         });
 
-        navLinks.forEach(a => {
-            a.classList.remove('active');
-            if (a.getAttribute('href').includes(current)) {
-                a.classList.add('active');
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').substring(1) === currentSection) {
+                link.classList.add('active');
             }
         });
     });
+
+    // 3. Bölümlerin ekrana geldikçe animasyonla belirmesi
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, {
+        threshold: 0.15 // Bölümün %15'i görününce animasyon tetiklenir
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
 
 });

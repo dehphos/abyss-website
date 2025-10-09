@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abyss AUV Takımı - Resmi Web Sitesi</title>
+    <title>Abyss AUV | Otonom Sualtı Sistemleri</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,12 +15,11 @@
 
     <header class="navbar">
         <div class="container">
-            <a href="#" class="navbar-brand">ABYSS AUV</a>
+            <a href="#anasayfa" class="navbar-brand">ABYSS AUV</a>
             <nav class="navbar-nav">
                 <ul>
-                    <li><a href="#hakkimizda">Hakkımızda</a></li>
-                    <li><a href="#projemiz">Projemiz</a></li>
                     <li><a href="#takim">Takım</a></li>
+                    <li><a href="#arac">Abyss V1</a></li>
                     <li><a href="#sponsorlar">Sponsorlar</a></li>
                     <li><a href="#iletisim">İletişim</a></li>
                 </ul>
@@ -29,80 +28,75 @@
     </header>
 
     <main>
-        <section id="hero">
-            <div class="container">
-                <h1>Otonom Sualtı Teknolojileri</h1>
-                <p>Geleceğin derinliklerini bugünden tasarlıyoruz.</p>
-                <a href="#projemiz" class="btn">Projemizi Keşfedin</a>
+        <section id="anasayfa" class="hero">
+            <!-- <video autoplay muted loop playsinline poster="assets/abyss-v1.jpg" class="hero-video">
+                <source src="assets/abyss-video.mp4" type="video/mp4">
+                Tarayıcınız video etiketini desteklemiyor.
+            </video> -->
+            <div class="hero-content">
+                <h1 class="fade-in">ABYSS V1</h1>
+                <p class="fade-in">Derinlerin Sınırlarını Yeniden Tanımlıyoruz</p>
             </div>
-        </section>
-
-        <section id="hakkimizda" class="content-section">
-            <div class="container">
-                <h2>Hakkımızda</h2>
-                <p>Abyss AUV, sualtı araştırmaları için yenilikçi otonom araçlar geliştirmek amacıyla bir araya gelmiş mühendislik öğrencilerinden oluşan bir takımdır. Misyonumuz, zorlu sualtı koşullarında görev yapabilecek akıllı ve verimli sistemler üretmektir.</p>
-            </div>
-        </section>
-
-        <section id="projemiz" class="content-section bg-light">
-            <div class="container">
-                <h2>Projemiz</h2>
-                <p>Geliştirdiğimiz son model otonom sualtı aracı, yüksek çözünürlüklü görüntüleme sistemleri, hassas sensörleri ve yapay zeka destekli navigasyon yetenekleri ile donatılmıştır. Aracımız, sualtı haritalama, biyolojik çeşitlilik analizi ve arama-kurtarma operasyonları gibi alanlarda kullanılmak üzere tasarlanmıştır.</p>
-                </div>
         </section>
 
         <section id="takim" class="content-section">
-            <div class="container">
-                <h2>Takımımız</h2>
-                <div class="team-grid">
-                    <div class="team-member">
-                        <h4>İsim Soyisim</h4>
-                        <p>Takım Kaptanı</p>
-                    </div>
-                    <div class="team-member">
-                        <h4>İsim Soyisim</h4>
-                        <p>Yazılım Lideri</p>
-                    </div>
-                    <div class="team-member">
-                        <h4>İsim Soyisim</h4>
-                        <p>Elektronik Lideri</p>
-                    </div>
-                     <div class="team-member">
-                        <h4>İsim Soyisim</h4>
-                        <p>Mekanik Tasarım</p>
-                    </div>
+            <div class="container section-content hidden">
+                <div class="text-content">
+                    <h2>Biz Kimiz?</h2>
+                    <p>Abyss AUV, otonom sualtı teknolojileri alanında öncü çözümler geliştirmek üzere toplanmış tutkulu bir mühendislik ekibidir. Disiplinlerarası bilgi birikimimizi birleştirerek, sualtı keşif ve operasyonlarının geleceğini şekillendirmeyi hedefliyoruz.</p>
+                </div>
+                <div class="image-content">
+                    <img src="assets/team-photo.jpg" alt="Abyss AUV Takımı">
                 </div>
             </div>
         </section>
 
-        <section id="sponsorlar" class="content-section bg-light">
-            <div class="container">
-                <h2>Sponsorlarımız</h2>
-                <p>Bu yolculukta bize destek olan değerli sponsorlarımıza teşekkür ederiz.</p>
+        <section id="arac" class="content-section bg-dark">
+            <div class="container section-content hidden">
+                 <!-- <div class="image-content">
+                    <img src="assets/abyss-v1.jpg" alt="Abyss V1 Otonom Sualtı Aracı">
+                </div> -->
+                <div class="text-content">
+                    <h2>Aracımız: Abyss V1</h2>
+                    <p>Abyss V1, modüler tasarımı ve gelişmiş sensör füzyonu algoritmaları ile en zorlu görevler için tasarlandı. Yüksek manevra kabiliyeti, uzun görev süresi ve akıllı otonomisi ile fark yaratır.</p>
+                    <ul class="specs-list">
+                        <li><strong>Boyutlar:</strong> 90cm x 60cm x 55cm</li>
+                        <li><strong>Ağırlık:</strong> 35 kg (havada)</li>
+                        <li><strong>Maksimum Derinlik:</strong> 100 Metre</li>
+                        <li><strong>Görev Süresi:</strong> 4 Saat</li>
+                        <li><strong>İtki Sistemi:</strong> 6 adet Fırçasız DC Motor</li>
+                        <li><strong>Navigasyon:</strong> IMU, DVL, Basınç Sensörü</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="sponsorlar" class="content-section">
+            <div class="container hidden">
+                <h2 class="section-title">Değerli Sponsorlarımız</h2>
+                <p class="section-subtitle">Bu projeyi mümkün kılan destekçilerimiz.</p>
                 <div class="sponsor-grid">
-                    <p>[Sponsor Logosu]</p>
-                    <p>[Sponsor Logosu]</p>
-                    <p>[Sponsor Logosu]</p>
+                    <div class="sponsor-logo">[Sponsor Logosu]</div>
+                    <div class="sponsor-logo">[Sponsor Logosu]</div>
+                    <div class="sponsor-logo">[Sponsor Logosu]</div>
+                    <div class="sponsor-logo">[Sponsor Logosu]</div>
                 </div>
             </div>
         </section>
-
-        <section id="iletisim" class="content-section">
-            <div class="container">
-                <h2>Bize Ulaşın</h2>
-                <p>Projemiz hakkında daha fazla bilgi almak veya sponsorluk için bizimle iletişime geçebilirsiniz.</p>
-                <p><strong>E-posta:</strong> <a href="mailto:iletisim@abyssauv.tech">iletisim@abyssauv.tech</a></p>
+        
+        <section id="iletisim" class="content-section bg-dark">
+            <div class="container hidden">
+                <h2 class="section-title">İletişime Geçin</h2>
+                <p class="section-subtitle">Takımımıza katılmak, sponsor olmak veya bilgi almak için bize yazın.</p>
+                <a href="mailto:iletisim@abyssauv.tech" class="contact-email">iletisim@abyssauv.tech</a>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Abyss AUV Takımı. Tüm Hakları Saklıdır.</p>
-        </div>
+        <p>&copy; 2025 Abyss AUV Takımı. Tüm hakları saklıdır.</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
