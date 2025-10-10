@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Takım Yapısı | Abyss AUV</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            /* Sadece bu sayfada, ana sayfadaki gibi tam ekran olmasın diye hero section'a gerek yok */
+            padding-top: 100px; /* Sabit navbar'ın altında kalmasın diye boşluk */
+        }
+        .page-container {
+            min-height: calc(100vh - 180px); /* Sayfa içeriği az olsa bile footer'ın aşağıda kalmasını sağlar */
+            text-align: center;
+        }
+        .diagram-container {
+            width: 100%;
+            max-width: 1000px; /* Diyagramın maksimum genişliği */
+            margin: 2rem auto; /* Ortalama */
+        }
+        .diagram-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            background-color: #f4f4f4; /* Resim yüklenene kadar veya transparan ise arkaplan */
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 10px 20px;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .back-button:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar scrolled"> <div class="container">
+            <a href="index.html" class="navbar-brand">ABYSS AUV</a>
+            <nav class="navbar-nav">
+                <ul>
+                     <li><a href="index.html#takim">Takım</a></li>
+                    <li><a href="index.html#arac">Abyss V1</a></li>
+                    <li><a href="index.html#sponsorlar">Sponsorlar</a></li>
+                    <li><a href="index.html#iletisim">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container page-container">
+            <h1 class="section-title">Takım Organizasyon Şeması</h1>
+            <p class="section-subtitle">Disiplinler ve sorumluluk dağılımımız.</p>
+
+            <div class="diagram-container">
+                <img src="assets/takim-diyagrami.png" alt="Takım Organizasyon Şeması">
+            </div>
+
+            <a href="index.html" class="back-button">Ana Sayfaya Dön</a>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Abyss AUV Takımı. Tüm hakları saklıdır.</p>
+    </footer>
+
+    </body>
+</html>
