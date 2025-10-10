@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abyss AUV | Otonom Sualtı Sistemleri</title>
-    <link rel="preload" as="image" href="assets/main screen/abyss-logo.png">
+    <title>{{ page.title | default: site.title }}</title>
+    
+    <link rel="preload" as="image" href="/assets/main screen/abyss-logo.png">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css?v=1.5">
 
 </head>
 <body>
@@ -17,11 +19,11 @@
     {% include header.html %}
 
     <main>
-        {{content}}
+        {{ content }}
     </main>
 
     {% include footer.html %}
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
 </html>
