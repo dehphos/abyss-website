@@ -8,6 +8,4 @@ Bugün takım için heyecan verici bir gündü. Abyss V1'in 3D baskı ile ürett
 
 **Çözümümüz:** Zımpara ve tesviye işlemleriyle yüzeyi düzelttik. Bir sonraki baskılarda bu toleransları %0.5 oranında artırmaya karar verdik.
 
-![Gövde Montajı](../assets/montaj.jpg)
-
 Bu deneyim, simülasyon ve gerçek dünya üretimleri arasındaki farkları bir kez daha gözler önüne serdi. Sızdırmazlık testleri haftaya!
