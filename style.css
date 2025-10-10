@@ -55,7 +55,7 @@ body {
 
 /* YENİ EKLENEN KURAL: Logoyu boyutlandırıyoruz */
 .navbar-brand img {
-    height: 100px; /* Logomuzun yüksekliğini 50 piksel olarak ayarlıyoruz */
+    height: 60px; /* Logomuzun yüksekliğini 50 piksel olarak ayarlıyoruz */
     width: auto;  /* Genişlik, oranın bozulmaması için otomatik ayarlanır */
     display: block; /* Hizalama sorunlarını önler */
     transition: height 0.4s ease; /* Yumuşak geçiş için */
@@ -63,7 +63,7 @@ body {
 
 /* BONUS: Sayfa aşağı kaydırıldığında logo hafifçe küçülsün */
 .navbar.scrolled .navbar-brand img {
-    height: 70px;
+    height: 40px;
 }
 
 .navbar-nav ul { list-style: none; display: flex; }
