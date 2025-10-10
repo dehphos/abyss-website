@@ -1,29 +1,18 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ page.title | default: site.title }}</title>
-    
-    <link rel="preload" as="image" href="/assets/main screen/abyss-logo.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="/style.css">
-
-</head>
-<body>
-
-    {% include header.html %}
-
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <h1>Bu Ana Şablon Dosyasıdır (default.html)</h1>
+    <hr>
     <main>
-        {{ content }}
+      {{ content }}
     </main>
-
-    {% include footer.html %}
-
-    <script src="/script.js"></script>
-</body>
+    <hr>
+    <footer>
+        <p>Test Sitesi Footer</p>
+    </footer>
+  </body>
 </html>
