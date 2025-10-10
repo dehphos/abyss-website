@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "İlk Gövde Montajı ve Karşılaşılan Zorluklar"
+excerpt: "Bu yazıda, Abyss V1'in ilk gövde montajı sırasında yaşadığımız tecrübeleri ve sızdırmazlık testlerindeki ilk sonuçları paylaşıyoruz."
 ---
 Bugün takım için heyecan verici bir gündü. Abyss V1'in 3D baskı ile ürettiğimiz ana gövde parçalarını birleştirmeye başladık. İlk denememizde, parçalar arasındaki toleransların beklediğimizden biraz daha sıkı olduğunu fark ettik. Bu, özellikle O-ring yuvalarında sızdırmazlık için kritik bir konuydu.
 

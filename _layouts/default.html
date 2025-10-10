@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title | default: site.title }}</title>
     
-    <link rel="preload" as="image" href="/assets/main screen/abyss-logo.png">
+    <link rel="preload" as="image" href="{{ '/assets/main screen/abyss-logo.png' | relative_url }}">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}?v=2.0">
 
 </head>
 <body>
@@ -24,6 +24,6 @@
 
     {% include footer.html %}
 
-    <script src="/script.js"></script>
+    <script src="{{ '/script.js' | relative_url }}"></script>
 </body>
 </html>

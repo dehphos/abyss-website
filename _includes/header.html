@@ -1,13 +1,13 @@
 <header class="navbar">
     <div class="container">
-        <a href="/" class="navbar-brand"><img src="/assets/main screen/abyss-logo.png"></a>
+        <a href="{{ '/' | relative_url }}" class="navbar-brand"><img src="{{ '/assets/main screen/abyss-logo.png' | relative_url }}"></a>
         <nav class="navbar-nav">
             <ul>
-                <li><a href="/#takim">Takım</a></li>
-                <li><a href="/#arac">Abyss V1</a></li>
-                <li><a href="/#sponsorlar">Sponsorlar</a></li>
-                <li><a href="/#iletisim">İletişim</a></li>
-                <li><a href="/gunluk.html"><b>Günlük</b></a></li>
+                <li><a href="{{ '/' | relative_url }}#takim">Takım</a></li>
+                <li><a href="{{ '/' | relative_url }}#arac">Abyss V1</a></li>
+                <li><a href="{{ '/' | relative_url }}#sponsorlar">Sponsorlar</a></li>
+                <li><a href="{{ '/' | relative_url }}#iletisim">İletişim</a></li>
+                <li><a href="{{ '/gunluk.html' | relative_url }}"><b>Günlük</b></a></li>
             </ul>
         </nav>
     </div>

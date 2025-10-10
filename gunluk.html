@@ -1,16 +1,16 @@
-
 ---
 layout: default
 title: Geliştirici Günlüğü
 ---
 <style>
-    body { padding-top: 100px; }
-    .post-list { list-style: none; max-width: 800px; margin: 2rem auto; }
-    .post-list-item { background-color: var(--bg-medium); padding: 1.5rem; margin-bottom: 1rem; border-radius: 8px; transition: transform 0.2s ease; }
-    .post-list-item:hover { transform: translateY(-5px); }
+    body { padding-top: 120px; }
+    .post-list { list-style: none; max-width: 800px; margin: 2rem auto; padding: 0 2rem; }
+    .post-list-item { background-color: var(--bg-medium); padding: 1.5rem; margin-bottom: 1.5rem; border-radius: 8px; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .post-list-item:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.3); }
     .post-list-item a { text-decoration: none; }
-    .post-list-item h3 { color: var(--accent-color); font-family: var(--font-heading); }
-    .post-list-item .date { color: #aaa; font-size: 0.9rem; margin-bottom: 0.5rem; }
+    .post-list-item h3 { color: var(--accent-color); font-family: var(--font-heading); margin-bottom: 0.5rem; }
+    .post-list-item .date { color: #aaa; font-size: 0.9rem; margin-bottom: 1rem; display: block; }
+    .post-list-item p { color: var(--text-light); }
 </style>
 <div class="container">
     <h1 class="section-title">Geliştirici Günlüğü</h1>
@@ -18,11 +18,13 @@ title: Geliştirici Günlüğü
         {% for post in site.posts %}
             <li class="post-list-item">
                 <a href="{{ post.url | relative_url }}">
-                    <p class="date">{{ post.date | date: "%d %B %Y" }}</p>
+                    <span class="date">{{ post.date | date: "%d %B %Y" }}</span>
                     <h3>{{ post.title }}</h3>
                     <p>{{ post.excerpt }}</p>
                 </a>
             </li>
+        {% else %}
+            <li>Henüz yayınlanmış bir yazı yok.</li>
         {% endfor %}
     </ul>
 </div>
