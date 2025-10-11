@@ -46,22 +46,19 @@ body {
     align-items: center; 
 }
 
-/* ESKİ KURALI GÜNCELLEDİK: Yazı stillerini kaldırdık */
 .navbar-brand { 
     text-decoration: none; 
-    display: flex; /* İçindeki logoyu dikey ortalamak için */
+    display: flex;
     align-items: center;
 }
 
-/* YENİ EKLENEN KURAL: Logoyu boyutlandırıyoruz */
 .navbar-brand img {
-    height: 60px; /* Logomuzun yüksekliğini 50 piksel olarak ayarlıyoruz */
-    width: auto;  /* Genişlik, oranın bozulmaması için otomatik ayarlanır */
-    display: block; /* Hizalama sorunlarını önler */
-    transition: height 0.4s ease; /* Yumuşak geçiş için */
+    height: 60px;
+    width: auto;
+    display: block;
+    transition: height 0.4s ease;
 }
 
-/* BONUS: Sayfa aşağı kaydırıldığında logo hafifçe küçülsün */
 .navbar.scrolled .navbar-brand img {
     height: 40px;
 }
@@ -71,12 +68,12 @@ body {
 .navbar-nav a { color: var(--text-light); text-decoration: none; font-weight: 500; font-size: 1rem; transition: color 0.3s; position: relative; padding-bottom: 5px; }
 .navbar-nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: var(--accent-color); transition: width 0.3s; }
 .navbar-nav a:hover::after, .navbar-nav a.active::after { width: 100%; }
-/* --- HERO BÖLÜMÜ --- */
-.hero { position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; }
-.hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.4); }
-.hero-content { color: white; }
-.hero-content h1 { font-family: var(--font-heading); font-size: 5rem; letter-spacing: 2px; }
-.hero-content p { font-size: 1.5rem; }
+
+/* HAMBURGER MENÜYÜ MASAÜSTÜNDE GİZLEMEK İÇİN DOĞRU YER BURASI */
+.hamburger-menu {
+    display: none;
+}
+
 
 /* --- GENEL BÖLÜM AYARLARI --- */
 .content-section { padding: 8rem 0; }
@@ -251,10 +248,4 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
         font-size: 1.2rem;
         padding: 0.8rem 1.5rem;
     }
-}
-.navbar-nav a:hover::after, .navbar-nav a.active::after { width: 100%; }
-
-/* YENİ EKLENECEK KURAL BURAYA */
-.hamburger-menu {
-    display: none; /* Hamburger menüyü masaüstünde gizle */
 }
