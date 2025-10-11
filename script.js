@@ -44,3 +44,23 @@ document.addEventListener('DOMContentLoaded', function() {
     hiddenElements.forEach((el) => observer.observe(el));
 
 });
+
+// --- MOBİL MENÜ ---
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger-menu');
+    const navMenu = document.querySelector('.navbar-nav');
+
+    // Hamburger ikonuna tıklandığında
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+        navMenu.classList.toggle('is-active');
+    });
+
+    // Menüdeki bir linke tıklandığında menüyü kapat
+    document.querySelectorAll('.navbar-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('is-active');
+            navMenu.classList.remove('is-active');
+        });
+    });
+});
