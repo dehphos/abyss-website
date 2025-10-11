@@ -2,6 +2,7 @@
 layout: default
 title: Ana Sayfa
 ---
+
 <section id="anasayfa" class="hero">
     <div class="hero-content">
         <h1 class="fade-in">ABYSS V1</h1>
@@ -22,15 +23,41 @@ title: Ana Sayfa
     </div>
 </section>
 
+<section id="arac" class="content-section bg-dark">
+    <div class="container section-content hidden">
+       <div class="image-content">
+            <img src="{{ '/assets/abyss-v1.jpg' | relative_url }}" alt="Abyss V1 Otonom Sualtı Aracı">
+        </div>
+        <div class="text-content">
+            <h2>Aracımız: Abyss V1</h2>
+            <p>Abyss V1, modüler tasarımı ve gelişmiş sensör füzyonu algoritmaları ile en zorlu görevler için tasarlandı. Yüksek manevra kabiliyeti, uzun görev süresi ve akıllı otonomisi ile fark yaratır.</p>
+            <ul class="specs-list">
+                <li><strong>Boyutlar:</strong> 53cm x 40cm x 20cm</li>
+                <li><strong>Ağırlık:</strong> 11,8 kg (havada)</li>
+                <li><strong>Maksimum Derinlik:</strong> 100 Metre</li>
+                <li><strong>Görev Süresi:</strong> 6 Saat</li>
+                <li><strong>İşlem Kartı:</strong> Jetson Orin Nano Super</li>
+                <li><strong>İtki Sistemi:</strong> 6 adet Fırçasız DC Motor</li>
+                <li><strong>Navigasyon:</strong> IMU, DVL, Basınç Sensörü</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
 <section id="sponsorlar" class="content-section">
     <div class="container hidden">
         <h2 class="section-title">Değerli Sponsorlarımız</h2>
-        <p class="section-subtitle">Bu projeyi mümkün kılan destekçilerimiz.</p>
+        <p class="section-subtitle">Bu projeyi mümkün kılan destekçilerimiz.</p>
         <div class="sponsor-grid">
             <a class="sponsor-logo" href="https://www.nemaksan.com" target="_blank" rel="noopener noreferrer"><img src="{{ "/assets/sponsorluklar/nemaksan/nemaksan.png" | relative_url }}" ></a>
-            </div>
+        </div>
     </div>
 </section>
 
 <section id="iletisim" class="content-section bg-dark">
-    </section>
+    <div class="container hidden">
+        <h2 class="section-title">İletişime Geçin</h2>
+        <p class="section-subtitle">Takımımıza katılmak, sponsor olmak veya bilgi almak için bize yazın.</p>
+        <a href="mailto:abyss.auv@gmail.com" class="contact-email">abyss.auv@gmail.com</a>
+    </div>
+</section>
