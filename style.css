@@ -252,3 +252,9 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
         padding: 0.8rem 1.5rem;
     }
 }
+.navbar-nav a:hover::after, .navbar-nav a.active::after { width: 100%; }
+
+/* YENİ EKLENECEK KURAL BURAYA */
+.hamburger-menu {
+    display: none; /* Hamburger menüyü masaüstünde gizle */
+}
