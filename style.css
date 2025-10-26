@@ -4,7 +4,7 @@
     --bg-medium: #354d7a;
     --text-light: #E0E1DD;
     --text-dark: #333;
-    --accent-color: #00BFFF; /* Deep Sky Blue - Vurgu Rengi */
+    --accent-color: #00BFFF; 
     --font-heading: 'Exo 2', sans-serif;
     --font-body: 'Roboto', sans-serif;
 }
@@ -17,7 +17,7 @@ body {
     font-family: var(--font-body);
     background-color: var(--bg-dark);
     color: var(--text-light);
-    overflow-x: hidden; /* Yatay scroll barı engelle */
+    overflow-x: hidden; 
 }
 
 .container {
@@ -31,13 +31,13 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem 0; /* Padding'i başlangıçta biraz azalttık */
+    padding: 1rem 0; 
     z-index: 1000;
     transition: background-color 0.4s ease, padding 0.4s ease;
 }
 .navbar.scrolled {
     background-color: var(--bg-dark);
-    padding: 0.75rem 0; /* Kaydırınca padding'i biraz daha azalttık */
+    padding: 0.75rem 0; 
     box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 .navbar .container { 
@@ -75,7 +75,6 @@ body {
 }
 
 /* --- HERO BÖLÜMÜ --- */
-/* BU BÖLÜM KESİNLİKLE SİLİNMEMELİ, EĞER SİLDİYSENİZ GERİ EKLEYİN */
 .hero { position: relative; height: 100vh; display: flex; justify-content: center; align-items: center; text-align: center; }
 .hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; filter: brightness(0.4); }
 .hero-content { color: white; }
@@ -90,7 +89,6 @@ body {
 .section-subtitle { text-align: center; font-size: 1.2rem; margin-bottom: 4rem; color: #aaa; }
 .section-content { display: flex; align-items: center; gap: 4rem; }
 .section-content .text-content { flex: 1; }
-.section-content .image-content { flex: 1; }
 .section-content img { width: 100%; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 .text-content h2 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--accent-color); }
 
@@ -102,27 +100,21 @@ body {
 /* --- SKETCHFAB 3D MODELİ İÇİN --- */
 .section-content .image-content { 
     flex: 1; 
-    display: flex; /* İçeriğini ortalamak için flexbox kullan */
-    justify-content: center; /* Yatayda ortala */
-    align-items: center; /* Dikeyde ortala */
-    min-height: 400px; /* Modelin minimum bir yüksekliğe sahip olmasını sağlar */
-    /* Mobil görünümde modelin yüksekliğini kontrol etmek için bu faydalı */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
 }
 
-/* sketchfab wrapper'ını daha da büyütmek ve dikey alanı artırmak için */
 .image-content .sketchfab-embed-wrapper {
   position: relative;
-  /* 3:2 en-boy oranı veya daha dik bir görüntü için 100% kullanıyoruz. 
-     Bu, modelin kabın yüksekliğini daha fazla kullanmasını sağlar.
-     İhtiyaca göre 90% veya 110% gibi değerlerle deneyebilirsiniz. */
-  padding-bottom: 100%; /* Modelin kapladığı dikey alanı %100'e çıkarır (kare bir alan gibi) */
-  width: 100%; /* Genişliği kabına göre %100 yapar */
-  height: 0; /* padding-bottom ile yüksekliği kontrol ettiğimiz için 0 */
+  padding-bottom: 100%; 
+  width: 100%;
+  height: 0;
   overflow: hidden;
-  border-radius: 8px; /* Diğer resimler gibi kenar yuvarlatma */
+  border-radius: 8px;
 }
 
-/* iframe'in kendisini bu kaba tam ekran yay */
 .image-content .sketchfab-embed-wrapper iframe {
   position: absolute;
   top: 0;
@@ -131,7 +123,6 @@ body {
   height: 100%;
 }
 
-/* Sketchfab'in kendi link yazısını (HTML'den silsek bile) gizler */
 .image-content .sketchfab-embed-wrapper p {
   display: none;
 }
@@ -139,38 +130,37 @@ body {
 /* --- SPONSORLAR --- */
 .sponsor-grid { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(180px, 300px)); /* Kutuların minimum genişliğini ayarladık */
-    gap: 1.5rem; /* Kutular arası boşluğu ayarladık */
-    justify-content: center; /* Kutuları merkeze hizala */
-    align-items: stretch; /* Kutuların aynı yüksekliğe sahip olmasını sağlar */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 300px));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: stretch;
     margin-top: 3rem;
 }
 
 .sponsor-logo {
-    background-color: #2a3d52; /* Hafif daha koyu bir gri tonu */
-    padding: 1.2rem; /* İç boşluğu ayarladık */
+    background-color: #2a3d52;
+    padding: 1.2rem;
     border-radius: 8px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100px; /* Her kutunun minimum yüksekliği */
-    max-height: 140px; /* Her kutunun maksimum yüksekliği */
-    overflow: hidden; /* Taşmayı engelle */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover efekti için geçiş */
+    min-height: 100px;
+    max-height: 140px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .sponsor-logo:hover {
-    transform: translateY(-5px); /* Üzerine gelince hafifçe yukarı kaydır */
-    box-shadow: 0 8px 15px rgba(0, 191, 255, 0.3); /* Parlak bir gölge ekle */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 191, 255, 0.3);
 }
 
 .sponsor-logo img {
-    max-width: 120%; /* Resmin kutu içinde %120 genişlikte olmasını sağlar */
-    max-height: 120%; /* Resmin kutu içinde %120 yükseklikte olmasını sağlar */
-    height: auto; /* Oranı koru */
-    object-fit: contain; /* Resmin kutu içinde oranları bozulmadan sığmasını sağlar */
+    max-width: 120%;
+    max-height: 120%;
+    height: auto;
+    object-fit: contain;
     display: block;
-    /* mix-blend-mode ve filter satırlarını kaldırdık, çünkü logonun kendi arkaplanı var */
 }
 /* --- İLETİŞİM --- */
 #iletisim { text-align: center; }
@@ -206,12 +196,11 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
 
 /* --- MOBİL UYUMLULUK (RESPONSIVE DESIGN) --- */
 
-/* Tablet ve telefonlar için geçerli olacak stiller (768px ve altı) */
 @media (max-width: 768px) {
 
     /* --- Mobil Menü Ayarları --- */
     .hamburger-menu {
-        display: block; /* Hamburger ikonu sadece mobilde görünsün */
+        display: block;
         cursor: pointer;
         background: none;
         border: none;
@@ -229,25 +218,25 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
     }
     
     .navbar-nav {
-        position: fixed; /* Menü tüm ekranı kaplasın */
-        left: -100%; /* Başlangıçta ekranın solunda gizli */
+        position: fixed;
+        left: -100%;
         top: 0;
         gap: 0;
         flex-direction: column;
         background-color: var(--bg-dark);
         width: 100%;
-        height: 100vh; /* Tam ekran yüksekliği */
+        height: 100vh;
         text-align: center;
         transition: 0.3s;
         padding-top: 5rem;
     }
 
     .navbar-nav.is-active {
-        left: 0; /* Aktif olduğunda ekranın soluna sıfırlanarak görünsün */
+        left: 0;
     }
 
     .navbar-nav ul {
-        flex-direction: column; /* Linkler alt alta gelsin */
+        flex-direction: column;
     }
 
     .navbar-nav li {
@@ -258,7 +247,6 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
         font-size: 1.5rem;
     }
 
-    /* Hamburger ikonunu 'X' işaretine dönüştürme animasyonu */
     .hamburger-menu.is-active .bar:nth-child(2) {
         opacity: 0;
     }
@@ -272,20 +260,32 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
     /* --- İçerik ve Yazı Boyutu Ayarları --- */
 
     .hero-content h1 {
-        font-size: 3.5rem; /* Ana başlığı küçülttük */
+        font-size: 3.5rem;
     }
     .hero-content p {
         font-size: 1.2rem;
     }
 
     .section-title {
-        font-size: 2.5rem; /* Bölüm başlıklarını küçülttük */
+        font-size: 2.5rem;
     }
 
     /* Yan yana duran içerikleri alt alta getirme */
     .section-content {
         flex-direction: column;
         gap: 3rem;
+    }
+    
+    /* --- 3D MODEL MOBİL DÜZELTMESİ (YENİ EKLENEN KOD) --- */
+    .section-content .image-content {
+        flex: none;
+        width: 100%;
+        min-height: auto; 
+    }
+
+    /* Mobilde modelin çok uzun (kare) olmaması için en-boy oranını değiştir (4:3) */
+    .image-content .sketchfab-embed-wrapper {
+        padding-bottom: 75%;
     }
     
     /* İletişim e-postasını küçültme */
@@ -302,5 +302,5 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
 
 /* Teknik özellik listesinin üzerine gelince satır belirginleşsin */
 .specs-list li:hover {
-    background-color: rgba(0, 191, 255, 0.1); /* Vurgu renginin şeffaf hali */
+    background-color: rgba(0, 191, 255, 0.1);
 }
