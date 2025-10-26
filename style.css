@@ -308,7 +308,7 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
 /* --- AŞAĞI KAYDIRMA OKU --- */
 .scroll-down-arrow {
     position: absolute;
-    bottom: 2rem; /* Ekranın altından boşluk */
+    bottom: 5rem; /* Ekranın altından boşluk */
     left: 50%;
     transform: translateX(-50%);
     color: var(--text-light); /* Açık renk (beyaz) */
