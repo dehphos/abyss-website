@@ -92,7 +92,7 @@ body {
 .section-content img { width: 100%; border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
 .text-content h2 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--accent-color); }
 
-/* --- ABYSS V1 TEKNİK ÖZELLİKLER --- */
+/* --- TEKNİK ÖZELLİKLER --- */
 .specs-list { list-style: none; margin-top: 1.5rem; }
 .specs-list li { padding: 0.5rem 0; border-bottom: 1px solid #333; }
 .specs-list strong { color: var(--accent-color); }
@@ -176,7 +176,7 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
 .show { opacity: 1; transform: translateY(0); }
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-/* --- Buton Stilleri --- */
+/* --- BUTON STİLLERİ --- */
 .btn-secondary {
     display: inline-block;
     margin-top: 1.5rem;
@@ -194,13 +194,12 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
     color: var(--bg-dark);
 }
 
-/* Takım üyesi kartlarının üzerine gelince hafifçe büyüsün */
 .team-member:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
 }
 
-/* Teknik özellik listesinin üzerine gelince satır belirginleşsin */
+
 .specs-list li:hover {
     background-color: rgba(0, 191, 255, 0.1);
 }
@@ -208,29 +207,29 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
 /* --- AŞAĞI KAYDIRMA OKU --- */
 .scroll-down-arrow {
     position: absolute;
-    bottom: 5rem; /* Ekranın altından boşluk */
+    bottom: 5rem; 
     left: 50%;
     transform: translateX(-50%);
-    color: var(--text-light); /* Açık renk (beyaz) */
+    color: var(--text-light); 
     text-decoration: none;
-    font-size: 2.5rem; /* Okun boyutu */
-    opacity: 0.7; /* Hafif şeffaf */
+    font-size: 2.5rem; 
+    opacity: 0.7; 
     z-index: 10;
-    animation: bounce 2s infinite; /* Zıplama animasyonu */
+    animation: bounce 2s infinite; 
 }
 
 .scroll-down-arrow:hover {
-    opacity: 1; /* Üzerine gelince belirginleşir */
+    opacity: 1; 
 }
 
-/* Zıplama animasyonunun tanımı */
+
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
         transform: translateX(-50%) translateY(0);
         opacity: 0.7;
     }
     40% {
-        transform: translateX(-50%) translateY(10px); /* Aşağı doğru zıplar */
+        transform: translateX(-50%) translateY(10px); 
         opacity: 1;
     }
     60% {
@@ -302,7 +301,7 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
         transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* --- İçerik ve Yazı Boyutu Ayarları --- */
+
 
     .hero-content h1 {
         font-size: 3.5rem;
@@ -315,31 +314,31 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
         font-size: 2.5rem;
     }
 
-    /* Yan yana duran içerikleri alt alta getirme */
+
     .section-content {
         flex-direction: column;
         gap: 3rem;
     }
     
-    /* --- 3D MODEL MOBİL DÜZELTMESİ (YENİ EKLENEN KOD) --- */
+
     .section-content .image-content {
         flex: none;
         width: 100%;
         min-height: auto; 
     }
 
-    /* Mobilde modelin çok uzun (kare) olmaması için en-boy oranını değiştir (4:3) */
+
     .image-content .sketchfab-embed-wrapper {
         padding-bottom: 75%;
     }
     
-    /* İletişim e-postasını küçültme */
+
     .contact-email {
         font-size: 1.2rem;
         padding: 0.8rem 1.5rem;
     }
 
     .scroll-down-arrow {
-        bottom: 10rem; /* <-- BU, MOBİL DEĞERİDİR (daha yukarı çektik) */
+        bottom: 10rem; /* <-- BU, MOBİL DEĞERİ --> */
     }
 }
