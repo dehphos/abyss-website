@@ -99,6 +99,16 @@ body {
 .specs-list li { padding: 0.5rem 0; border-bottom: 1px solid #333; }
 .specs-list strong { color: var(--accent-color); }
 
+/* --- SKETCHFAB 3D MODELİ İÇİN --- */
+.image-content .sketchfab-embed-wrapper {
+  position: relative;
+  /* 4:3 en-boy oranı için 75% kullanıyoruz. Bu, modeli daha yüksek yapar. */
+  padding-bottom: 75%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px; /* Diğer resimler gibi kenar yuvarlatma */
+}
+
 /* --- SPONSORLAR --- */
 .sponsor-grid { 
     display: grid; 
