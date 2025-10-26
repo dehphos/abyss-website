@@ -339,6 +339,10 @@ footer { text-align: center; padding: 2rem 0; background-color: var(--bg-medium)
     }
 
     .scroll-down-arrow {
-        bottom: 10rem; /* <-- BU, MOBİL DEĞERİ --> */
+        bottom: 10rem; 
+    }
+
+    .hero {
+        padding-bottom: 15vh; 
     }
 }
